@@ -8,6 +8,7 @@ import CreateOrder, {action as formAction} from './features/order/CreateOrder';
 import Order, {loader as OrderLoader} from './features/order/Order';
 import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
+import OrderNow from './features/order/OrderNow';
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
         { path: '/menu', element: <Menu /> , loader: MenuLoader},
         { path: '/cart', element: <Cart />},
         { path: '/order/new', element: <CreateOrder />, action: formAction },
-        { path: '/order/:orderId', element: <Order />, loader: OrderLoader}
+        { path: '/order/:orderId', element: <Order />, loader: OrderLoader},
+        { path: '/order/success', element: <OrderNow />}
     ]
   },
 
